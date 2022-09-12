@@ -9,7 +9,7 @@
   outputs = { self, np, fu, ds }:
     with np.lib;
     with fu.lib;
-    eachSystem [ "x86_64-linux" ] (system:
+    eachSystem [ "x86_64-linux" "aarch64-darwin" ] (system:
       let
         ghcVersion = "902";
         version = "${ghcVersion}.${substring 0 8 self.lastModifiedDate}.${
